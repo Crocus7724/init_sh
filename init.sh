@@ -10,7 +10,7 @@ else
 fi
 
 init_mac(){
-  brew install fish jq peco python3 go
+  brew install fish jq fzf python3 go
   curl https://sh.rustup.rs -sSf | sh
   echo `which fish` >> /etc/shells
   chsh fish
@@ -22,7 +22,9 @@ init_mac(){
 
 # ubuntu
 init_ubuntu(){
-  sudo apt install fish jq peco python3 golang
+  sudo apt install fish jq python3 golang
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  $HOME/.fzf/install
   mkdir $HOME/.go
   curl https://sh.rustup.rs -sSf | sh
   chsh fish
