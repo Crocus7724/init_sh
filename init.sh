@@ -10,7 +10,8 @@ else
 fi
 
 init_mac(){
-  brew install fish jq fzf python3 go
+  brew update
+  brew install fish jq fzf python3 go nodebrew
   curl https://sh.rustup.rs -sSf | sh
   echo `which fish` >> /etc/shells
   mkdir ~/go
