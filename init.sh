@@ -13,6 +13,7 @@ init_mac(){
   brew install fish jq fzf python3 go
   curl https://sh.rustup.rs -sSf | sh
   echo `which fish` >> /etc/shells
+  mkdir ~/go
   chsh fish
   curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
   fisher install z docker-completion

@@ -4,7 +4,7 @@ function ssh
   else
     ag '^host [^*]' ~/.ssh/config | cut -d ' ' -f 2 | fzf | read selected
     if [ $selected ]
-      bash -c  "ssh -o $selected"
+      commandline -i "ssh $selected"
     end
   end
 end
